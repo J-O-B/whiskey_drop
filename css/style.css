@@ -20,7 +20,7 @@ body {
     border-radius:0;
     margin-bottom:0;
     padding:5px 15px;
-    background-image: linear-gradient(to right, salmon , white, salmon);
+    background-image: linear-gradient(to right, #f05f40 , white, #f05f40);
     border-color: red;
 }
 
@@ -62,8 +62,11 @@ body {
 .page-header h2{
     margin-top:0;
 }
+.quotes .page-header{
+    margin-bottom: 25px;
+}
 
-/* Card Containers */
+/* Card Containers - #f05f40 translated into RGB*/
 .quotes{
     background: radial-gradient(rgba(240,95,64, 0.9),rgba(0, 0, 0, 0.1));
     border-radius: 25px;
@@ -200,6 +203,7 @@ body {
 
 /* Animate style only for screens larger than 1024px*/
 @media only screen and (min-width: 1024px){
+    /* hover feature transform */
 .feature {
   -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
@@ -214,10 +218,30 @@ body {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
 }
+
+/* hover linear gradient */
 .quotes-container:hover,
 .features-container:hover,
 .monthly-container:hover{
-background: linear-gradient(0,rgba(240,95,64, 0.05), rgba(240,95,64, 0.3), rgba(240,95,64, 0.05));
-transition: background-image 3s ease;
+    background: linear-gradient(0,rgba(240,95,64, 0.0), rgba(240,95,64, 0.3), rgba(240,95,64, 0.0));
+}
+
+/* Hover over monthly whiskeys */
+.mon-whiskey {
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.mon-whiskey:hover, .mon-whiskey:focus, .mon-whiskey:active{
+  -webkit-transform: translateY(-4px);
+  transform: translateY(-4px);
 }
 }
