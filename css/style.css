@@ -1,16 +1,28 @@
 body {
     font-family: 'Roboto', sans-serif;
+    color:white;
+}
+.background-wrap{
     background: url('../images/whiskey-background.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    color:white;
 }
 
 /* Containers */
 
-.alert-container {}
+.alert-container .col-12{
+    padding-left:0;
+    padding-right:0;
+}
+.site-wide-alert{
+    border-radius:0;
+    margin-bottom:0;
+    padding:5px 15px;
+    background-image: linear-gradient(to right, salmon , white, salmon);
+    border-color: red;
+}
 
 .callout-container {
     height: 100vh;
@@ -27,17 +39,62 @@ body {
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-image: linear-gradient(0, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1));
 }
 
 .quotes-container {
-    background: inline-gradient()
+    background-image: linear-gradient(0, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1));
 }
 
 .features-container {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-image: linear-gradient(0, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1));
+}
+.monthly-container{
+    background-image: linear-gradient(0, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1));
 }
 
+/* Page headers */
+.page-header{
+    margin-bottom:0;
+    border-bottom:0;
+    text-align:center;
+}
+.page-header h2{
+    margin-top:0;
+}
+
+/* Card Containers */
+.quotes{
+    background: radial-gradient(rgba(240,95,64, 0.9),rgba(0, 0, 0, 0.1));
+    border-radius: 25px;
+ }
+
+.features{
+    background: radial-gradient(rgba(240,95,64, 0.9),rgba(0, 0, 0, 0.1));
+    border-radius: 25px;
+    padding: 20px;
+    text-align: center;
+}
+.features i{
+    margin:20px;
+    font-size: 45px;
+    line-height:45px;
+}
+.feature .btn{
+    background:white;
+    border-color: white;
+    border-radius: 15px;
+    min-width: 100px;
+    font-weight: bold;
+    margin-top: 10px;
+    color:#f05f40;
+}
+
+.monthly-favorites{
+    background: radial-gradient(rgba(240,95,64, 0.9),rgba(0, 0, 0, 0.1));
+    border-radius: 25px;
+    padding: 20px;
+}
 /* Block dividers */
 
 .block-divider {
@@ -53,6 +110,45 @@ body {
 
 .block-divider--short {
     width: 35px;
+}
+
+/* Content containers */
+.content-container{
+    padding-top:50px;
+    padding-bottom:50px;
+}
+
+/* Navbar area */
+.navalert-container{
+    position: absolute;
+    top:0;
+    left:0;
+    padding-left:0;
+    padding-right:0;
+    z-index:1;
+}
+
+.navbar{
+    margin-bottom:0;
+    border:0;
+    width:100%;
+    background-color: rgba(0,0,0, 0.25);
+}
+
+.navbar .navbar-toggler{
+    border:0;
+}
+
+.navbar-brand{
+    font-weight:bold;
+}
+
+.navbar .navbar-nav a{
+    font-weight: bold;
+}
+
+.navbar .navbar-nav{
+    font-weight: bold;
 }
 
 /* Jumbotron */
@@ -100,4 +196,28 @@ body {
     background-color: #df4929;
     border-color: #df4929;
     color: white;
+}
+
+/* Animate style only for screens larger than 1024px*/
+@media only screen and (min-width: 1024px){
+.feature {
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow, transform;
+  transition-property: box-shadow, transform;
+}
+.feature:hover, .feature:focus, .feature:active {
+  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.quotes-container:hover,
+.features-container:hover,
+.monthly-container:hover{
+background: linear-gradient(0,rgba(240,95,64, 0.05), rgba(240,95,64, 0.3), rgba(240,95,64, 0.05));
+transition: background-image 3s ease;
+}
 }
